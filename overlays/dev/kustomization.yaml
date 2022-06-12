@@ -3,7 +3,7 @@ kind: Kustomization
 images:
 - name: 308943070041.dkr.ecr.ap-northeast-2.amazonaws.com/bespin-react-frontend2
   newName: 308943070041.dkr.ecr.ap-northeast-2.amazonaws.com/bespin-react-frontend2
-  newTag: 46c00dc5
+  newTag: 24eae32b
 resources:
 - ../../base
 patchesStrategicMerge:
