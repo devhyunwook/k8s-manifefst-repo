@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: bespin-react-frontend2
+  annotations:
+    alb.ingress.kubernetes.io/healthcheck-path: "/"
+  labels:
+    env: dev
+spec:
+  selector:
+    app: frontend-fargate

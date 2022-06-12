@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+images:
+- name: 308943070041.dkr.ecr.ap-northeast-2.amazonaws.com/bespin-react-frontend2
+  newName: 308943070041.dkr.ecr.ap-northeast-2.amazonaws.com/bespin-react-frontend2
+  newTag: test
+resources:
+- ../../base
+patchesStrategicMerge:
+- front-deployment-patch.yaml
+- front-service-patch.yaml

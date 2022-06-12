@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bespin-react-frontend2
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend-fargate
+  template:
+    metadata:
+      labels:
+        app: frontend-fargate
+    spec:
+      containers:
+        - name: bespin-react-frontend2
+          image: 308943070041.dkr.ecr.ap-northeast-2.amazonaws.com/bespin-react-frontend2:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
